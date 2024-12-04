@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Riesgo Académico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Riesgo Académico</h1>
+        <form action="/resultados" method="POST">
+            <label for="asistencia">Asistencia (%):</label>
+            <input type="number" id="asistencia" name="asistencia" required>
+
+            <label for="promedio">Promedio (0-20):</label>
+            <input type="number" id="promedio" name="promedio" required>
+
+            <label for="participacion">Participación (%):</label>
+            <input type="number" id="participacion" name="participacion" required>
+
+            <label for="omision">Porcentaje de evaluaciones no completadas:</label>
+            <input type="number" id="omision" name="omision_evaluaciones" required>
+
+            <label for="problemas">¿Problemas socioeconómicos?</label>
+            <select id="problemas" name="problemas_socioeconomicos">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+
+            <label for="carga">Carga académica adicional:</label>
+            <input type="number" id="carga" name="carga_academica">
+
+            <label for="semestre_pasado">Promedio del semestre anterior (0-20):</label>
+            <input type="number" id="semestre_pasado" name="semestre_pasado" required>
+
+            <button type="submit">Evaluar Riesgo</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Evaluación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container resultados">
+        <h1>Resultado de Evaluación</h1>
+        <p><strong>Solicitud:</strong> {{ resultado['Solicitud'] }}</p>
+        <p><strong>Acción:</strong> {{ resultado['Acción'] }}</p>
+        <a href="/">Volver al formulario</a>
+    </div>
+</body>
+</html>
